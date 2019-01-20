@@ -1,0 +1,21 @@
+# Travis CI Configuration File
+# https://docs.travis-ci.com/user/customizing-the-build/
+
+# vimscript is not currently supported.  Use generic.
+# See https://github.com/travis-ci/travis-ci/issues/2867
+language: generic
+
+# To test on OS X in addition to Linux, uncomment:
+# os:
+#  - linux
+#  - osx
+
+install:
+  # Note: --user to avoid permission errors in /usr/local without sudo
+  - pip install --user vim-vint
+  - git clone --depth 1 https://github.com/ynkdir/vim-vimlparser /tmp/vim-vimlparser
+  - git clone --depth 1 https://github.com/syngan/vim-vimlint /tmp/vim-vimlint
+
+script:
+  - vint -sV .
+  - /tmp/vim-vimlint/bin/vimlint.sh -l /tmp/vim-vimlint -p /tmp/vim-vimlparser -v .
