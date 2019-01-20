@@ -12,7 +12,8 @@ language: generic
 
 install:
   # Note: --user to avoid permission errors in /usr/local without sudo
-  - pip install --user vim-vint
+  # Note: --no-binary vim-vint is used to work around Kuniwak/vint#287
+  - pip install --user --no-binary vim-vint vim-vint
   - git clone --depth 1 https://github.com/ynkdir/vim-vimlparser /tmp/vim-vimlparser
   - git clone --depth 1 https://github.com/syngan/vim-vimlint /tmp/vim-vimlint
 
