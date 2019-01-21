@@ -105,3 +105,12 @@ I would appreciate constructive feedback and suggestions.  I am also willing to
 collaborate with any Syntastic developers who might be interested in
 incorporating this functionality into Syntastic so that it doesn't require a
 separate plugin.
+
+
+## See Also
+
+If you have read this far, you may also be interested in these other plugins:
+
+- [syntastic-detect-checkers](https://github.com/kevinoid/syntastic-detect-checkers)
+  \- Detect checkers to use based on the file being edited.
+- [vim-node](https://github.com/moll/vim-node) - Vim enhancements for Node.js.
