@@ -15,4 +15,4 @@ git diff -z --cached --name-only --diff-filter=AM |
 	tr '\n\0' '\0\n' |
 	grep -a '\.vim$' |
 	tr '\0\n' '\n\0' |
-	xargs -0r vint --
+	xargs -0r vint -sV --
