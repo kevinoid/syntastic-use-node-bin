@@ -18,5 +18,5 @@ install:
   - git clone --depth 1 https://github.com/syngan/vim-vimlint /tmp/vim-vimlint
 
 script:
-  - vint -sV .
+  - vint -s .
   - /tmp/vim-vimlint/bin/vimlint.sh -l /tmp/vim-vimlint -p /tmp/vim-vimlparser -v .
