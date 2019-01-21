@@ -17,8 +17,8 @@ if exists('g:loaded_syntastic_use_node_bin')
 endif
 let g:loaded_syntastic_use_node_bin = 1
 
-let s:save_cpo = &cpo
-set cpo&vim
+let s:save_cpoptions = &cpoptions
+set cpoptions&vim
 
 " For each checker matching a:ftalias and a:hints_list, if its executable is
 " present in node_modules/.bin above a:path, set
@@ -74,5 +74,5 @@ if get(g:, 'syntastic_use_node_bin', 1)
     augroup END
 endif
 
-let &cpo = s:save_cpo
-unlet s:save_cpo
+let &cpoptions = s:save_cpoptions
+unlet s:save_cpoptions
