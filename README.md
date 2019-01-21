@@ -52,9 +52,9 @@ This plugin is currently implemented using the following algorithm:
         If executable is found:
           Set b:syntastic_{lang}_{checker}_exec to path of executable
 
-To debug the plugin, set
-[`g:syntastic_debug`](https://github.com/vim-syntastic/syntastic/blob/0d25f4fb/doc/syntastic.txt)
-= 33 in `.vimrc` and look for lines starting with `SyntasticUseNodeBin: ` in
+To debug the plugin, [`set g:syntastic_debug =
+33`](https://github.com/vim-syntastic/syntastic/blob/0d25f4fb/doc/syntastic.txt)
+in `.vimrc` and look for lines starting with `SyntasticUseNodeBin: ` in
 [`:messages`](https://vimhelp.org/message.txt.html#%3Amessages).
 
 To customize the behavior of this plugin, users can `set
