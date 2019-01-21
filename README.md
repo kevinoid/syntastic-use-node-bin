@@ -76,6 +76,14 @@ others may find preferable:
   to a globally installed version of the checker, so that both `IsAvailable()`
   and `GetVersion()` are satisfied.  This may also cause problems with version
   mismatches between the global and per-project checker versions.
+* Set `g:syntastic_<language>_<checker>_exe` to `npm run <checker> --`.
+  However, this requires/assumes `package.json` defines a script with the
+  checker name, which is probably not a safe assumption for most checkers.
+  Also, As with `npx` above, it requires setting
+  `g:syntastic_<language>_<checker>_exec` to a globally installed version of
+  the checker, so that both `IsAvailable()` and `GetVersion()` are satisfied.
+  This may also cause problems with version mismatches between the global and
+  per-project checker versions.
 * Include `node_modules/.bin` in `$PATH` globally (e.g. using
   [`node_modules.vim`](https://github.com/rliang/node_modules.vim) or [in your
   shell](https://coderwall.com/p/i5z1cg/automatically-update-path-with-proper-node_modules-bin)).
